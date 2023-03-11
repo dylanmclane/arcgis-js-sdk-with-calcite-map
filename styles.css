@@ -6,25 +6,43 @@ body,
   height: 100%;
   width: 100%;
 }
-
 body {
   display: flex;
 }
-
 calcite-loader {
   align-self: center;
   justify-self: center;
 }
-
+calcite-label {
+  --calcite-label-margin-bottom: 0px;
+}
+#header {
+  display: flex;
+  padding: 0 1rem;
+  background-color: var(--calcite-ui-foreground-1);
+}
 #header-title {
   margin-left: 1rem;
   margin-right: 1rem;
 }
-
+#header-controls {
+  display: flex;
+  margin-inline-start: auto;
+  align-self: center;
+}
 #info-content {
   padding: 0.75rem;
 }
-
 calcite-rating {
   margin-top: 0.25rem;
+}
+calcite-switch {
+  margin: 0 0.5rem;
+}
+.label-wrapper {
+  display:flex;
+  margin-inline: 1rem;
+  padding: 0.5rem;
+  border: 1px solid var(--calcite-ui-border-1);
+  cursor: pointer; 
 }
