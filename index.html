@@ -5,10 +5,13 @@
     <title>Create a mapping app with Calcite</title>
     
     <script src="https://js.arcgis.com/calcite-components/1.0.7/calcite.esm.js" type="module"></script>
-    <link rel="stylesheet" href="stylesheet" href="https://js.arcgis.com/calcite-components/1.0.7/calcite.css" />
+    <link rel="stylesheet" href="https://js.arcgis.com/calcite-components/1.0.7/calcite.css" />
     
     <script src="https://js.arcgis.com/4.25/"></script>
     <link rel="stylesheet" href="https://js.arcgis.com/4.25/esri/themes/light/main.css" />
+
+    <link disabled id="arcgis-maps-sdk-theme-dark" rel="stylesheet" href="https://js.arcgis.com/4.25/esri/themes/dark/main.css" />
+    <link id="arcgis-maps-sdk-theme-light" rel="stylesheet" href="https://js.arcgis.com/4.25/esri/themes/light/main.css" />
 
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
@@ -22,10 +25,25 @@
 <!--Create the layout -->
       <calcite-shell content-behind hidden>
         
+    <!--  Header slot  -->
+      <div slot="header" id="header">
+
+        <!-- Header title -->
         <h2 id="header-title" slot="header">
           <!-- Dynamically populated  -->
         </h2>
         
+        <!-- Controls -->
+        <div id="header-controls">
+          <!-- Dark Mode Switch -->
+          <calcite-label layout="inline" class="label-wrapper">
+            Dark mode: Off
+            <calcite-switch></calcite-switch>
+            On
+          </calcite-label>
+        </div>
+      </div>
+
         <calcite-shell-panel slot="panel-start" detached>
 <!-- Add action and panel components  -->
           <calcite-action-bar slot="action-bar">
