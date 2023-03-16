@@ -8,7 +8,7 @@ Next steps:
 - Time slider and other ui needs work to become mobile friendly/responsive.
 - Experiment with/customize UI: https://developers.arcgis.com/javascript/latest/view-ui/
 
-Completed changes:
-✅ Add dark-mode switch: https://developers.arcgis.com/calcite-design-system/tutorials/build-a-dark-mode-switch/
-✅ Changed Map to time enabled map (72 hour NWS precipitation prediction data)
-✅ Add time slider widget (found documentation: https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-TimeSlider.html)
+Completed changes: <br>
+✅ Add dark-mode switch: https://developers.arcgis.com/calcite-design-system/tutorials/build-a-dark-mode-switch/ <br>
+✅ Changed Map to time enabled map (72 hour NWS precipitation prediction data) <br>
+✅ Add time slider widget (found documentation: https://developers.arcgis.com/javascript/latest/api-reference/esri-widgets-TimeSlider.html) <br>
