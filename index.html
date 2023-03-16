@@ -15,80 +15,86 @@
 
     <link rel="stylesheet" href="styles.css">
     <script src="script.js"></script>
+    
+    <script src=""></script>
 
   </head>
   <body>
-
-<!--Loader component-->
-    <calcite-loader></calcite-loader>
-
-<!--Create the layout -->
-      <calcite-shell content-behind hidden>
+    <!--Loader component-->
+      <calcite-loader></calcite-loader>
+    <!--Create the layout -->
         
-    <!--  Header slot  -->
-      <div slot="header" id="header">
-
-        <!-- Header title -->
-        <h2 id="header-title" slot="header">
-          <!-- Dynamically populated  -->
-        </h2>
-        
-        <!-- Controls -->
-        <div id="header-controls">
-          <!-- Dark Mode Switch -->
-          <calcite-label layout="inline" class="label-wrapper">
-            Dark mode: Off
-            <calcite-switch></calcite-switch>
-            On
-          </calcite-label>
-        </div>
-      </div>
-
-        <calcite-shell-panel slot="panel-start" detached>
-<!-- Add action and panel components  -->
-          <calcite-action-bar slot="action-bar">
-            <calcite-action data-action-id="layers" icon="layers" text="Layers"></calcite-action>
-            <calcite-action data-action-id="basemaps" icon="basemap" text="Basemaps"></calcite-action>
-            <calcite-action data-action-id="legend" icon="legend" text="Legend"></calcite-action>
-            <calcite-action data-action-id="bookmarks" icon="bookmark" text="Bookmarks"></calcite-action>
-            <calcite-action data-action-id="print" icon="print" text="Print"></calcite-action>
-            <calcite-action data-action-id="information" icon="information" text="Information"></calcite-action>
-          </calcite-action-bar>
+        <calcite-shell content-behind hidden>
           
-<!--  Map-specific panels that provide a div for arcGIS Maps SDK for JavaScript widgets -->
-          <calcite-panel heading="Layers" height-scale="1" data-panel-id="layers" hidden>
-            <div id="layers-container"></div>
-          </calcite-panel>
-          <calcite-panel heading="Basemaps" height-scale="1" data-panel-id="basemaps" hidden>
-            <div id="basemaps-container"></div>
-          </calcite-panel>
-          <calcite-panel heading="Legend" height-scale="1" data-panel-id="legend" hidden>
-            <div id="legend-container"></div>
-          </calcite-panel>
-          <calcite-panel heading="Bookmarks" height-scale="1" data-panel-id="bookmarks" hidden>
-            <div id="bookmarks-container"></div>
-          </calcite-panel>
-          <calcite-panel heading="Print" height-scale="1" data-panel-id="print" hidden>
-            <div id="print-container"></div>
-          </calcite-panel>
-          <calcite-panel heading="Details" data-panel-id="information" hidden>
-            <div id="info-content">
-              <img id="item-thumbnail" alt="webmap thumbnail">
-              <div id="item-description">
-                <!-- Dynamically populated -->
-              </div>
-              <calcite-label layout="inline">
-                <b>Rating:</b>
-                <calcite-rating id="item-rating" read-only>
-                  <!-- Dynamically populated -->
-                </calcite-rating>
+      <!--  Header slot  -->
+        <div slot="header" id="header">
+          
+            <h2 id="header-title" slot="header">
+              <!-- Dynamically populated  -->
+            </h2>
+            
+          <!-- Controls -->
+            <div id="header-controls">
+            <!-- Dark Mode switch -->
+              <calcite-label layout="inline" class="label-wrapper">
+                Dark mode: Off
+                <calcite-switch></calcite-switch>
+                On
               </calcite-label>
             </div>
-          </calcite-panel>
-        </calcite-shell-panel>
-      
-        <div id="viewDiv"></div>
-      
-      </calcite-shell>
-  </body>
+          </div>
+          
+          <calcite-shell-panel slot="panel-start" detached>
+            <!-- Add action and panel components  -->
+            <calcite-action-bar slot="action-bar">
+              <calcite-action data-action-id="layers" icon="layers" text="Layers"></calcite-action>
+              <calcite-action data-action-id="basemaps" icon="basemap" text="Basemaps"></calcite-action>
+              <calcite-action data-action-id="legend" icon="legend" text="Legend"></calcite-action>
+              <calcite-action data-action-id="bookmarks" icon="bookmark" text="Bookmarks"></calcite-action>
+              <calcite-action data-action-id="print" icon="print" text="Print"></calcite-action>
+              <calcite-action data-action-id="information" icon="information" text="Information"></calcite-action>
+               <calcite-action data-action-id="timeSlider" icon="clock" text="Time"></calcite-action>
+            </calcite-action-bar>
+            
+            <!--  Map-specific panels that provide a div for arcGIS Maps SDK for JavaScript widgets -->
+            <calcite-panel heading="Layers" height-scale="1" data-panel-id="layers" hidden>
+              <div id="layers-container"></div>
+            </calcite-panel>
+            <calcite-panel heading="Basemaps" height-scale="1" data-panel-id="basemaps" hidden>
+              <div id="basemaps-container"></div>
+            </calcite-panel>
+            <calcite-panel heading="Legend" height-scale="1" data-panel-id="legend" hidden>
+              <div id="legend-container"></div>
+            </calcite-panel>
+            <calcite-panel heading="Bookmarks" height-scale="1" data-panel-id="bookmarks" hidden>
+              <div id="bookmarks-container"></div>
+            </calcite-panel>
+            <calcite-panel heading="Print" height-scale="1" data-panel-id="print" hidden>
+              <div id="print-container"></div>
+            </calcite-panel>
+            <calcite-panel heading="Details" data-panel-id="information" hidden>
+              <div id="info-content">
+                <img id="item-thumbnail" alt="webmap thumbnail">
+                <div id="item-description">
+                  <!-- Dynamically populated -->
+                </div>
+                <calcite-label layout="inline">
+                  <b>Rating:</b>
+                  <calcite-rating id="item-rating" read-only>
+                    <!-- Dynamically populated -->
+                  </calcite-rating>
+                </calcite-label>
+              </div>
+            </calcite-panel>
+            
+          </calcite-shell-panel>
+        
+          <div id="viewDiv"></div>
+          
+  <!-- Time Slider widget over map -->
+          <div data-panel-id="timeSlider" id="timeSlider"></div>
+         
+        </calcite-shell>
+    </body>
+    
 </html>

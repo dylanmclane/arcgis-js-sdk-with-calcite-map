@@ -7,12 +7,13 @@ require([
   "esri/widgets/LayerList",
   "esri/widgets/Legend",
   "esri/widgets/Print",
+  "esri/widgets/TimeSlider",
   "esri/config"
-], function(WebMap, MapView, Bookmarks, BasemapGallery, LayerList, Legend, Print, esriConfig){
-  // esriConfig.apikey = "";
+], function(WebMap, MapView, Bookmarks, BasemapGallery, LayerList, Legend, Print, TimeSlider, esriConfig){
+   // esriConfig.apikey = "AAPK050681d7529b45e8a0435c5e4a837e92GJWaoLV3cC7H78-RHpxdBRk0B-C1jTCYaqOerMN2uP_zkIS7-kXnvwVSQEvQnErX";
 
   const webmapId = new URLSearchParams(window.location.search).get("webmap")
-  ?? "210c5b77056846808c7a5ce93920be81";
+  ?? "b0811f94164846029ba25473cb0fd411";
 
   // Display a map
 
@@ -54,7 +55,23 @@ require([
     view,
     container: "print-container"
   });
-
+//   Time Slider widget initialization
+  TimeSlider.getPropertiesFromWebMap(map).then((timeSliderSettings) => {
+    const timeSlider = new TimeSlider({
+      ...timeSliderSettings,
+      view,
+      playRate: 1000,
+      container: "timeSlider",
+      mode: "time-window",
+      fullTimeExtent: {
+        start: new Date(2023, 2, 15),
+        end: new Date(2023, 2, 17)
+      },
+      loop: true
+    });
+    console.log(`The playback rate is ${timeSlider.playRate} ms.`)
+  });
+ 
   // Populate the content
 
   map.when(() => {
