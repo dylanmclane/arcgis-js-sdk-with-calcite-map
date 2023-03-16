@@ -10,7 +10,7 @@ require([
   "esri/widgets/TimeSlider",
   "esri/config"
 ], function(WebMap, MapView, Bookmarks, BasemapGallery, LayerList, Legend, Print, TimeSlider, esriConfig){
-   // esriConfig.apikey = "AAPK050681d7529b45e8a0435c5e4a837e92GJWaoLV3cC7H78-RHpxdBRk0B-C1jTCYaqOerMN2uP_zkIS7-kXnvwVSQEvQnErX";
+   // esriConfig.apikey = "";
 
   const webmapId = new URLSearchParams(window.location.search).get("webmap")
   ?? "b0811f94164846029ba25473cb0fd411";
