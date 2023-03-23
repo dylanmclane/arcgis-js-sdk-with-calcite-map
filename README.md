@@ -7,6 +7,7 @@ Built using Esri ArcGIS Maps SDK for JavaScript and Calcite Design System "Creat
 
 Next steps:
 - Time slider widget time extent does not update automatically/as the data updates. Find and fix this parameter. 
+  - Time slider issue when using map: Web Map stores Time Slider widget data start/end based on when the map was saved. Layer needs to be used, but other widgets and dark mode switch are built off of using map. Possible to make this transition?
 - Time slider and other ui needs work to become mobile friendly/responsive.
 - Experiment with/customize UI: https://developers.arcgis.com/javascript/latest/view-ui/
 
