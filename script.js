@@ -13,7 +13,7 @@ require([
    // esriConfig.apikey = "";
 
   const webmapId = new URLSearchParams(window.location.search).get("webmap")
-  ?? "b0811f94164846029ba25473cb0fd411";
+  ?? "b3ae384875284b8891196a2f132deb81";
 
   // Display a map
 
@@ -64,8 +64,8 @@ require([
       container: "timeSlider",
       mode: "time-window",
       fullTimeExtent: {
-        start: new Date(2023, 2, 15),
-        end: new Date(2023, 2, 17)
+        start: new Date(2023, 7, 23),
+        end: new Date(2023, 7, 25)
       },
       loop: true
     });
