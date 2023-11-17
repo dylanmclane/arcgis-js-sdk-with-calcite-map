@@ -64,8 +64,8 @@ require([
       container: "timeSlider",
       mode: "time-window",
       fullTimeExtent: {
-        start: new Date(2023, 7, 23),
-        end: new Date(2023, 7, 25)
+        start: new Date(2023, 10, 17),
+        end: new Date(2023, 10, 19)
       },
       loop: true
     });
