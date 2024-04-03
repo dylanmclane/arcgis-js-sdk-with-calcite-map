@@ -1,7 +1,9 @@
-# arcgis-js-sdk-with-calcite-map
+# ArcGIS JavaScript SDK with Calcite Design System 72 hour NOAA NWS precipitation map
 UI project utilizing ArcGIS Maps SDK for JavaScript and Calcite Design System
 
 Hosted on Netlify: https://arcgiscalcitemap.netlify.app/
+
+Data source: https://www.arcgis.com/home/item.html?id=b3ae384875284b8891196a2f132deb81
 
 Built using Esri ArcGIS Maps SDK for JavaScript and Calcite Design System "Create a mapping app" documentation: https://developers.arcgis.com/calcite-design-system/tutorials/create-a-mapping-app/
 
